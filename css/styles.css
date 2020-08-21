@@ -1,0 +1,259 @@
+.container{
+    margin-top: 30px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e6005c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    z-index: 99;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #99003d;
+  }
+  
+  .active {
+    background-color: #99003d;
+  }
+
+.logo {
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    top: 15px;
+    left: 30px;
+    z-index: 100;
+    /* padding: 14px 16px; */
+}
+
+.homePage{
+  background-image: url("../images/background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.welcome-text {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    z-index: 1;
+}
+
+button{
+    padding:5px;
+    background-color: #e6005c;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    z-index: 1;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    float: left;
+}
+
+.myphoto{
+  height: 400px;
+  width: 200px;
+}
+
+.drawings{
+  height: 400px;
+  width: 400px;
+}
+
+.headings{
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+
+  /* background: #e6005c; */
+  /* color: white; */
+  color: #000;
+  font-size: 30px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  background-color: white;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  text-justify: auto;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  background-color: white;
+  padding-left: 5%;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.grid-container2 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  text-justify: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.timeline-area{
+  /* margin: 90px auto; */
+  width: 360px;
+  border-left:2px solid #ccc;
+  padding: 0 20px 0 30px;
+}
+
+.timeline-row{
+  padding: 10px 25px;
+  background-color: #e6fff2;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  line-height: 1.7;
+  position: relative;
+  height: 110px;
+  margin-bottom: 20px;
+}
+
+.timeline-row:before{
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  border:3px solid #ddd;
+  position: absolute;
+  top:10px;
+  left:-40px;
+
+}
+
+.timeline-row:after{
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border-color:transparent #000 transparent transparent;
+  border-style: solid;
+  border-width: 8px;
+  position: absolute;
+  top:10px;
+  left:-17px;
+}
+
+.timeline-row h2{
+  margin:0;
+  text-transform: uppercase;
+  font-family: cursive;
+}
+
+.timeline-row h3, .timeline-row h4{
+  margin:0;
+  font-family: cursive;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 50%;
+  border-radius: 5px;
+  padding:15px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-info h3{
+  text-align-last: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .item1 { grid-area: 1; }
+  .item2 { grid-area: 2 ; }
+  .item3 { grid-area: 3; }
+  .card-item1{ grid-area: 1;}
+  .card-item2{ grid-area: 2;}
+  .card{ width: 90%; padding:0px; margin:0px;}
+}
+
+  @media screen and (max-width: 600px) {
+    ul li.right, 
+    ul li {
+        float: none;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    .nav-bar{
+        display: none;
+    }
+    .logo{
+        display: block;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .hamburger-menu{
+        display: none;
+    }
+    .nav-bar{
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
+  }
+
+  
+  
+ 
